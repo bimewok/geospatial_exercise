@@ -1,6 +1,6 @@
-**Ben Garrett Mapdwell Geospatial Data Exercise**
+#**Ben Garrett Mapdwell Geospatial Data Exercise**
 
-**Introduction**
+#**Introduction**
 
 This Github repository contains Ben Garrett&#39;s submission for the geospatial data wrangling exercise provided by Mapdwell. The repository structure is as follows:
 
