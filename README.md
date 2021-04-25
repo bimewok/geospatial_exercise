@@ -3,7 +3,7 @@
 # **Introduction**
 
 This Github repository contains Ben Garrett&#39;s submission for the geospatial data wrangling exercise provided by Mapdwell. The repository structure is as follows:
-
+```
 -Geospatial\_Data\_Exercise/
 
 --------------------bg\_geo\_tools/
@@ -29,7 +29,7 @@ This Github repository contains Ben Garrett&#39;s submission for the geospatial 
 -----------gis\_env.yml
 
 -----------README.md
-
+```
 where:
 
 _-original\_data_ contains all files provided by Mapdwell
