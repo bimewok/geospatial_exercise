@@ -4,63 +4,63 @@
 
 This Github repository contains Ben Garrett&#39;s submission for the geospatial data wrangling exercise provided by Mapdwell. The repository structure is as follows:
 ```
--Geospatial\_Data\_Exercise/
+-Geospatial_Data_Exercise/
 
---------------------bg\_geo\_tools/
+--------------------bg_geo_tools/
 
----------------------------- bg\_geo\_tools.py
+---------------------------- bg_geo_tools.py
 
---------------------original\_data/
+--------------------original_data/
 
---------------------intermediate\_data/
+--------------------intermediate_data/
 
 --------------------outputs/
 
------------zip\_stats.py
+-----------zip_stats.py
 
------------above\_avg\_ghi.py
+-----------above_avg_ghi.py
 
------------charleston\_dsm.py
+-----------charleston_dsm.py
 
------------charlestown\_buildings\_heights.py
+-----------charlestown_buildings_heights.py
 
------------interactive\_results.ipynb
+-----------interactive_results.ipynb
 
------------gis\_env.yml
+-----------gis_env.yml
 
 -----------README.md
 ```
 where:
 
-`_-original\_data_` contains all files provided by Mapdwell
+`_-original_data_` contains all files provided by Mapdwell
 
-`_-intermediate\_data_` contains files produced during processing
+`_-intermediate_data_` contains files produced during processing
 
 `_-outputs_ contains` four files for each requested output for the project
 
-`-_bg\_geo\_tools_` contains a bg\_geo\_tools module
+`-_bg_geo_tools_` contains a bg\_geo\_tools module
 
-`-_zip\_stats.py_, _above\_avg\_ghi.py_, _charleston\_dsm.py_, _charlestown\_buildings\_heights.py_` are the scripts that produced each of the four output files.
+`-_zip_stats.py_, _above_avg_ghi.py_, _charleston_dsm.py_, _charlestown_buildings_heights.py_` are the scripts that produced each of the four output files.
 
-`-interactive\_results.ipynb` is a notebook that allows users to visualize and interact with my outputs.
+`-interactive_results.ipynb` is a notebook that allows users to visualize and interact with my outputs.
 
 # **Usage**
 
 Four scripts are located in the main repository:
 
-`-zip\_stats.py` (task one) (runtime = 13 seconds)
+`-zip_stats.py` (task one) (runtime = 13 seconds)
 
-`-above\_avg\_ghi.py` (task two) (runtime = 8 seconds)
+`-above_avg_ghi.py` (task two) (runtime = 8 seconds)
 
-`-charleston\_dsm.py` (task three) (runtime = 22 minutes)
+`-charleston_dsm.py` (task three) (runtime = 22 minutes)
 
-`-charleston\_building\_heights.py` (task four) ( runtime = 12seconds)
+`-charleston_building_heights.py` (task four) ( runtime = 12seconds)
 
-Each of these scripts will produce the requested output and save it in the /outputs folder. These scripts also import functions from a module I created for this project in /bg\_geo\_tools.
+Each of these scripts will produce the requested output and save it in the /outputs folder. These scripts also import functions from a module I created for this project in `/bg_geo_tools`.
 
 The scripts will attempt to change the working directory to match the file structure of the repository. However, running the scripts in interactive mode line by line may produce exception asking the user to manually change the working directory if python could not do so. Other than this, no modification of the code or setting of variables should be required to produce the requested output. Gdal will throw an error in several of the scripts but this is a part of a try / except conditional, so it can be ignored.
 
-**Additionally, my outputs can be visualized with interactive folium maps and dataframes in the i**** nteractive\_results.ipynb**
+**Additionally, my outputs can be visualized with interactive folium maps and dataframes in the `interactive_results.ipynb`**
 
 # **Requirements**
 
