@@ -52,7 +52,7 @@ Four scripts are located in the main repository:
 
 `-above\_avg\_ghi.py` (task two) (runtime = 8 seconds)
 
-`-charleston\_dsm.py` (task three) (runtime = 20minutes)
+`-charleston\_dsm.py` (task three) (runtime = 22 minutes)
 
 `-charleston\_building\_heights.py` (task four) ( runtime = 12seconds)
 
