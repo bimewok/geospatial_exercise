@@ -67,7 +67,7 @@ The scripts will attempt to change the working directory to match the file struc
 All code is written in an Anaconda python 3.7 environment and tested to work on a windows machine using conda. No software other than python and the below required packages were used for geoprocessing. You can reproduce this environment by calling:
 
 ```
-conda env create -f gis\_env.yml
+conda env create -f gis_env.yml
 ```
 
 This environment contains several packages that are not used in this project. To manually build an environment, make sure you have the following packages:
