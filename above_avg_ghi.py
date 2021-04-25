@@ -8,7 +8,7 @@ from rasterstats import zonal_stats
 import geopandas as gpd
 import os
 
-os.chdir(os.path.dirname(os.path.realpath('__file__')))
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 from bg_geo_tools.bg_geo_tools import *
 

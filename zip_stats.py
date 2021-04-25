@@ -12,7 +12,7 @@ import sys
 import numpy as np
 import os
 
-os.chdir(os.path.dirname(os.path.realpath('__file__')))
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
 from bg_geo_tools.bg_geo_tools import *

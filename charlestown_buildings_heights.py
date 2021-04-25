@@ -11,7 +11,7 @@ import geopandas as gpd
 import pandas as pd
 import os
 
-os.chdir(os.path.dirname(os.path.realpath('__file__')))
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 from bg_geo_tools.bg_geo_tools import get_projection
 
@@ -80,4 +80,5 @@ building_heights = buildings.merge(
     right_on='building_id'
     )
 
-building_heights.to_file(output_dir+'/'+'charlestown_buildings_heights.shp')
+building_heights.to_file(output_dir+'/'+'charlestown_buildings_heights.geojson',
+                         driver='GeoJSON')

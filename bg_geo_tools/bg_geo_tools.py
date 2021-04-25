@@ -66,3 +66,11 @@ def raster_to_poly(raster_path, shp_out_path, layer_name, field_name):
     gdal.FPolygonize(band, band, out_layer, 0, [], callback=None)        
     poly.Destroy()
     source_raster = None
+    
+def make_hillshade(inpath, outpath):
+    import os
+    gdal_string = ('gdaldem hillshade '
+                   '{inpath} {outpath} -of JPEG '
+                   '-b 1 -z 1.0 -s 1.0 -az 315.0 -alt 45.0').format(
+                       inpath=inpath, outpath=outpath)
+    os.system(gdal_string)

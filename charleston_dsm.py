@@ -11,8 +11,9 @@ import geopandas as gpd
 from shapely.geometry import Polygon
 import os
 import time
+from bg_geo_tools.bg_geo_tools import *
 
-os.chdir(os.path.dirname(os.path.realpath('__file__')))
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 start_time = time.time()
 
@@ -115,6 +116,8 @@ gdal_string = ('gdal_rasterize -l grid -a z -tr {cell_size} {cell_size} '
 
 os.system(gdal_string)
 
+make_hillshade(output_dir+'/'+'charleston.tif', 
+               intermediate_data_dir+'/'+'hillshade.jpg')
 
 print("--- %s seconds ---" % (time.time() - start_time))
 
