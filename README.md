@@ -32,7 +32,7 @@ This Github repository contains Ben Garrett&#39;s submission for the geospatial 
 ```
 where:
 
-_-original\_data_ contains all files provided by Mapdwell
+'_-original\_data_' contains all files provided by Mapdwell
 
 _-intermediate\_data_ contains files produced during processing
 
