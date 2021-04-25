@@ -12,12 +12,19 @@ import sys
 import numpy as np
 import os
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+try:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+except:
+    if os.getcwd().split('\\')[-1] != 'geospatial_exercise':
+        print('unable to change working directory')
+        print('please manually change wd to folder')
+        print('/geospatial_exercise')
+        sys.exit()
 
-
+wd = os.getcwd()
 from bg_geo_tools.bg_geo_tools import *
 
-#==================== global variables =========================
+
 zip_code_path = 'original_data\ma_zipcodes.shp'
 jan_ghi_path = 'original_data\ghi_jan.tif'
 jul_ghi_path = 'original_data\ghi_jul.tif'

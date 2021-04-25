@@ -6,9 +6,16 @@ Created on Sat Apr 24 11:00:24 2021
 """
 from rasterstats import zonal_stats
 import geopandas as gpd
-import os
+import os, sys
 
-os.chdir(os.path.dirname(os.path.realpath(__file__)))
+try:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+except:
+    if os.getcwd().split('\\')[-1] != 'geospatial_exercise':
+        print('unable to change working directory')
+        print('please manually change wd to folder')
+        print('/geospatial_exercise')
+        sys.exit()
 
 from bg_geo_tools.bg_geo_tools import *
 

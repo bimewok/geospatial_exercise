@@ -9,11 +9,18 @@ import pylas
 import numpy as np
 import geopandas as gpd
 from shapely.geometry import Polygon
-import os
+import os, sys
 import time
 from bg_geo_tools.bg_geo_tools import *
 
-os.chdir(os.path.dirname(os.path.realpath(__file__)))
+try:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+except:
+    if os.getcwd().split('\\')[-1] != 'geospatial_exercise':
+        print('unable to change working directory')
+        print('please manually change wd to folder')
+        print('/geospatial_exercise')
+        sys.exit()
 
 start_time = time.time()
 
