@@ -32,29 +32,29 @@ This Github repository contains Ben Garrett&#39;s submission for the geospatial 
 ```
 where:
 
-'_-original\_data_' contains all files provided by Mapdwell
+`_-original\_data_` contains all files provided by Mapdwell
 
-_-intermediate\_data_ contains files produced during processing
+`_-intermediate\_data_` contains files produced during processing
 
-_-outputs_ contains four files for each requested output for the project
+`_-outputs_ contains` four files for each requested output for the project
 
--_bg\_geo\_tools_ contains a bg\_geo\_tools module
+`-_bg\_geo\_tools_` contains a bg\_geo\_tools module
 
--_zip\_stats.py_, _above\_avg\_ghi.py_, _charleston\_dsm.py_, _charlestown\_buildings\_heights.py_ are the scripts that produced each of the four output files.
+`-_zip\_stats.py_, _above\_avg\_ghi.py_, _charleston\_dsm.py_, _charlestown\_buildings\_heights.py_` are the scripts that produced each of the four output files.
 
--interactive\_results.ipynb is a notebook that allows users to visualize and interact with my outputs.
+`-interactive\_results.ipynb` is a notebook that allows users to visualize and interact with my outputs.
 
 # **Usage**
 
 Four scripts are located in the main repository:
 
--zip\_stats.py (task one) (runtime = 13 seconds)
+`-zip\_stats.py` (task one) (runtime = 13 seconds)
 
--above\_avg\_ghi.py (task two) (runtime = 8 seconds)
+`-above\_avg\_ghi.py` (task two) (runtime = 8 seconds)
 
--charleston\_dsm.py (task three) (runtime = 20minutes)
+`-charleston\_dsm.py` (task three) (runtime = 20minutes)
 
--charleston\_building\_heights.py (task four) ( runtime = 12seconds)
+`-charleston\_building\_heights.py` (task four) ( runtime = 12seconds)
 
 Each of these scripts will produce the requested output and save it in the /outputs folder. These scripts also import functions from a module I created for this project in /bg\_geo\_tools.
 
