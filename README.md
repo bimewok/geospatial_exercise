@@ -1,9 +1,9 @@
-**Ben Garrett Mapdwell Geospatial Data Exercise**
+# **Ben Garrett Mapdwell Geospatial Data Exercise**
 
-**Introduction**
+# **Introduction**
 
 This Github repository contains Ben Garrett&#39;s submission for the geospatial data wrangling exercise provided by Mapdwell. The repository structure is as follows:
-
+```
 -Geospatial\_Data\_Exercise/
 
 --------------------bg\_geo\_tools/
@@ -29,32 +29,32 @@ This Github repository contains Ben Garrett&#39;s submission for the geospatial 
 -----------gis\_env.yml
 
 -----------README.md
-
+```
 where:
 
-_-original\_data_ contains all files provided by Mapdwell
+`_-original\_data_` contains all files provided by Mapdwell
 
-_-intermediate\_data_ contains files produced during processing
+`_-intermediate\_data_` contains files produced during processing
 
-_-outputs_ contains four files for each requested output for the project
+`_-outputs_ contains` four files for each requested output for the project
 
--_bg\_geo\_tools_ contains a bg\_geo\_tools module
+`-_bg\_geo\_tools_` contains a bg\_geo\_tools module
 
--_zip\_stats.py_, _above\_avg\_ghi.py_, _charleston\_dsm.py_, _charlestown\_buildings\_heights.py_ are the scripts that produced each of the four output files.
+`-_zip\_stats.py_, _above\_avg\_ghi.py_, _charleston\_dsm.py_, _charlestown\_buildings\_heights.py_` are the scripts that produced each of the four output files.
 
--interactive\_results.ipynb is a notebook that allows users to visualize and interact with my outputs.
+`-interactive\_results.ipynb` is a notebook that allows users to visualize and interact with my outputs.
 
-**Usage**
+# **Usage**
 
 Four scripts are located in the main repository:
 
--zip\_stats.py (task one) (runtime = 13 seconds)
+`-zip\_stats.py` (task one) (runtime = 13 seconds)
 
--above\_avg\_ghi.py (task two) (runtime = 8 seconds)
+`-above\_avg\_ghi.py` (task two) (runtime = 8 seconds)
 
--charleston\_dsm.py (task three) (runtime = 20minutes)
+`-charleston\_dsm.py` (task three) (runtime = 20minutes)
 
--charleston\_building\_heights.py (task four) ( runtime = 12seconds)
+`-charleston\_building\_heights.py` (task four) ( runtime = 12seconds)
 
 Each of these scripts will produce the requested output and save it in the /outputs folder. These scripts also import functions from a module I created for this project in /bg\_geo\_tools.
 
@@ -62,12 +62,12 @@ The scripts will attempt to change the working directory to match the file struc
 
 **Additionally, my outputs can be visualized with interactive folium maps and dataframes in the i**** nteractive\_results.ipynb**
 
-**Requirements**
+# **Requirements**
 
 All code is written in an Anaconda python 3.7 environment and tested to work on a windows machine using conda. No software other than python and the below required packages were used for geoprocessing. You can reproduce this environment by calling:
 
 ```
-conda env create -f gis\_env.yml
+conda env create -f gis_env.yml
 ```
 
 This environment contains several packages that are not used in this project. To manually build an environment, make sure you have the following packages:
@@ -82,9 +82,9 @@ This environment contains several packages that are not used in this project. To
 
 -folium=0.12.0
 
-**Methods**
+# **Methods**
 
-**Task One -**
+## **Task One -**
 
 1. Ensure GHI raster have same projection
 2. Check zip code layer&#39;s projection against GHI rasters
@@ -97,7 +97,7 @@ This environment contains several packages that are not used in this project. To
 9. Perform a spatial join of solar panels and zip codes and sum intersections for each zip code
 10. Merge the solar panel join and GHI zonal statistics into one exportable csv. Calculate Jan to Jul difference in mean GHI.
 
-**Task**  **Two**  **-**
+## **Task**  **Two**  **-**
 
 1. Convert zip code layer to singlepart. Perform dissolve to create a mask of the state
 2. Reproject zip code layer to math GHI layer
@@ -106,7 +106,7 @@ This environment contains several packages that are not used in this project. To
 5. Perform intersection of GHI polygon and MA mask to remove the GHI cells that are not in MA
 6. Filter out GHI polygons whose Jan GHI is below the MA Jan GHI mean
 
-**Task**  **Three**  **-**
+## **Task**  **Three**  **-**
 
 1. Load laz lidar file and extract arrays of x, y and z coordinates
 2. Find the min and max x and y coordinates of the lidar dataset
@@ -116,7 +116,7 @@ This environment contains several packages that are not used in this project. To
 6. Aggregate the join by polygon and take the highest z (height) coordinate return for each polygons
 7. Convert polygons to a raster dsm. Also export a hillshade jpg using gdal. For best results, it would be a good idea to fill in holes (cells with no lidar returns) by interpolating their nearest neighbors, but I ran out of time.
 
-**Task**  **Four**  **-**
+## **Task**  **Four**  **-**
 
 1. Reproject buildings footprints to match dsm raster.
 2. Calculate zonal statistics for polygons and raster cells by selecting maximum dsm height for each building in the footprints dataset. This can be tuned to filter out steeples and communication towers by choosing the 90th percentile max height rather than max height, depending on what the desired results should represent.
